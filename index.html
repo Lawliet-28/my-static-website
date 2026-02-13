@@ -1,0 +1,297 @@
+<!--Laboratory Task 1: Creating a Basic HTML5 Document-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction To HTMl5 Basics</title>
+    
+
+ 
+   
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Introduction to HTML5 Basics</h1>
+<!--Laboratory Task 2: Lists, Links, and Images -->
+
+    <!-- Image (no card) -->
+    <div class="image-container">
+        <img src="https://images3.alphacoders.com/140/thumb-1920-1401614.png" alt="Image 1">
+    </div>
+
+    <!-- Lists Card (side by side) -->
+     <!--Unordered Lists-->
+    <div class="card">
+        <h2>Lists</h2>
+        <div class="lists-container">
+            <div class="list-column">
+                <h3>Unordered</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <!--Ordered List-->
+            <div class="list-column">
+                <h3>Ordered</h3>
+                <ol>
+                    <li>Project</li>
+                    <li>Development</li>
+                    <li>Sheesh!!</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+        <!-- Hyperlink Card -->
+    <div class="card">
+        <h2>Hyperlink</h2>
+        <a href="https://www.google.com" target="_blank">Visit Google</a>
+    </div>
+
+<!-- Laboratory Task 3; Table Creation-->
+    <!-- Table Card -->
+    <div class="card">
+        <h2>Student Information</h2>
+        <table>
+            <caption>Student Information</caption>
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Year Level</th>
+            </tr>
+            <tr>
+                <td>Linuel Leogan</td>
+                <td>BS Information Technology</td>
+                <td>3rd Year</td>
+            </tr>
+            <tr>
+                <td>Ryuzaki Lawliet</td>
+                <td>BS Computer Science</td>
+                <td>1st Year</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+</div>
+
+<!--Laboratory Task 4: Javasript Alert-->
+   
+    <script>
+        window.onload = () => alert("Hello World");
+    </script>
+
+
+
+
+
+
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://vsthemes.org/uploads/posts/2025-11/56ec2784e1_waguri-kaoruko-kaoru-hana-wa-rin-to-saku.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding: 30px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Overlay for better readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 60, 114, 0.2);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: rgba(59, 130, 246, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(20px);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+        }
+
+        h2 {
+            color: #0d0b91;
+            margin-top: 0;
+            padding-bottom: 8px;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color:  #0d0b91;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        ul, ol {
+            padding-left: 30px;
+            margin: 10px 0;
+            color: #0d0b91;
+        }
+
+        ul li {
+            padding: 8px 0;
+            list-style-type: disc;
+            color: #0d0b91;
+        }
+
+        ol li {
+            padding: 8px 0;
+            list-style-type: decimal;
+            color:  #0d0b91;
+        }
+
+        /* Ensure bullets and numbers are visible */
+        ul li::marker {
+            color: #3b82f6;
+            font-size: 1.2em;
+        }
+
+        ol li::marker {
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
+        a {
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            border-color: #1e40af;
+        }
+
+        .lists-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .list-column {
+            flex: 1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        caption {
+            margin-bottom: 15px;
+            font-weight: bold;
+            color:  #0d0b91;
+            font-size: 1.1em;
+        }
+
+        th {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color:  #0d0b91;
+            font-weight: 600;
+        }
+
+        th, td {
+            padding: 14px;
+            text-align: center;
+            color: #0d0b91;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        tr:hover {
+            background: rgba(59, 130, 246, 0.3);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+
+</style>
+</body>
+</html>
